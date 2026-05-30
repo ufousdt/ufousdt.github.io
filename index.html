@@ -3,32 +3,129 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>U F O NFT Market</title>
+<title>Crypto & NFT Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#0f172a;color:white}
-header{text-align:center;padding:30px;background:#111827;border-bottom:2px solid #22c55e}
-header h1{font-size:40px}
-header p{color:#cbd5e1;margin-top:10px}
-.card{background:#1e293b;width:90%;max-width:400px;margin:25px auto;padding:20px;border-radius:15px;text-align:center}
-.price{color:#22c55e;font-size:24px;margin:15px 0;font-weight:bold}
-.btn{display:inline-block;background:#229ED9;color:white;text-decoration:none;padding:12px 25px;border-radius:10px;font-weight:bold}
-footer{text-align:center;padding:20px;color:#94a3b8}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #141428, #0b0b14);
+  color: white;
+}
+
+/* TOP BAR */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.crypto {
+  display: flex;
+  gap: 15px;
+  font-size: 13px;
+}
+
+.crypto div {
+  background: rgba(255,255,255,0.07);
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+/* MAIN */
+.container {
+  padding: 20px;
+  display: grid;
+  gap: 20px;
+}
+
+/* SALES */
+.card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.09);
+}
+
+.sales-item {
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.25);
+}
+
+/* NFT */
+.nft img {
+  width: 180px;
+  border-radius: 14px;
+  margin-top: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.card {
+  animation: fadeIn 0.6s ease;
+}
+
+/* MOBILE */
+@media(max-width: 600px){
+  .crypto {
+    flex-wrap: wrap;
+  }
+}
 </style>
 </head>
+
 <body>
-<header><h1>🛸 U F O</h1><p>NFT və TikTok Jeton Satışı</p></header>
-<div class="card">
-<h2>🎁 TikTok Jeton</h2>
-<div class="price">1K = 19 AZN</div>
-<p>Təhlükəsiz və sürətli satış.</p><br>
-<a class="btn" href="https://t.me/ufousdt" target="_blank">Telegram ilə Əlaqə</a>
+
+<div class="topbar">
+  <div class="logo">CRYPTO DASH</div>
+  <div class="crypto">
+    <div>BTC $67,120</div>
+    <div>ETH $3,210</div>
+    <div>SOL $145</div>
+  </div>
 </div>
-<div class="card">
-<h2>🖼️ NFT Satışı</h2>
-<div class="price">Mövcud NFT-lər</div>
-<p>NFT almaq və ya satmaq üçün əlaqə saxlayın.</p><br>
-<a class="btn" href="https://t.me/ufousdt" target="_blank">Telegram ilə Əlaqə</a>
+
+<div class="container">
+
+  <!-- SALES -->
+  <div class="card">
+    <h2>Son Satışlar 🔥</h2>
+    <div class="sales-item">150 stars satıldı</div>
+    <div class="sales-item">100 stars satıldı</div>
+    <div class="sales-item">800 stars satıldı</div>
+  </div>
+
+  <!-- NFT -->
+  <div class="card nft">
+    <h2>NFT Collection</h2>
+    <img src="https://via.placeholder.com/200" alt="NFT">
+    <p>Limited Edition Digital Asset</p>
+  </div>
+
 </div>
-<footer>© 2026 U F O Market</footer>
-</body></html>
+
+</body>
+</html>
