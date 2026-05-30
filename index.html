@@ -3,55 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>U F O Market</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<title>UFO MARKET</title>
 
 <style>
 body{
   margin:0;
-  font-family:Inter;
-  background:#f5f6f8; /* ağ fon */
-  color:#111;
+  font-family:Arial;
+  background:#0b0f1a;
+  color:white;
 }
 
 /* HEADER */
-.header{
-  background:#0f172a; /* qara */
-  color:white;
-  padding:15px;
-  text-align:center;
-  font-weight:700;
+.topbar{
+  background:#111827;
+  padding:16px 15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-weight:800;
+  font-size:16px;
   letter-spacing:2px;
 }
 
-/* GRID */
+.cart{
+  position:relative;
+  font-size:22px;
+}
+
+.badge{
+  position:absolute;
+  top:-6px;
+  right:-8px;
+  background:#00ff88;
+  color:#000;
+  font-size:10px;
+  width:16px;
+  height:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  font-weight:700;
+}
+
+/* LIVE BAR */
+.live{
+  margin:10px 15px;
+  background:#0f172a;
+  border:1px solid #2a3355;
+  padding:10px;
+  border-radius:10px;
+  font-size:13px;
+}
+
+/* CONTAINER */
 .container{
   padding:15px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
+  display:flex;
+  flex-direction:column;
   gap:12px;
 }
 
 /* CARD */
 .card{
-  background:white;
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 3px 10px rgba(0,0,0,0.08);
-  border:1px solid #e5e7eb;
-}
-
-/* IMAGE */
-.card img{
-  width:100%;
-  height:110px;
-  object-fit:cover;
-}
-
-/* CONTENT */
-.content{
-  padding:10px;
+  background:#161b2e;
+  border:1px solid #2a3355;
+  border-radius:12px;
+  padding:12px;
 }
 
 .title{
@@ -61,91 +82,121 @@ body{
 
 .price{
   margin-top:5px;
-  font-size:13px;
-  color:#16a34a; /* yaşıl */
+  color:#00ff88;
   font-weight:700;
 }
 
-/* BUTTON */
 .btn{
   display:block;
   margin-top:8px;
-  padding:8px;
+  padding:10px;
   text-align:center;
-  background:#16a34a; /* yaşıl */
-  color:white;
-  font-size:12px;
+  background:#00ff88;
+  color:#000;
+  font-size:13px;
   border-radius:8px;
   text-decoration:none;
-  font-weight:600;
-  transition:0.2s;
+  font-weight:700;
 }
 
-.btn:hover{
-  background:#128a3d;
-}
-
-/* SMALL TAG */
-.tag{
-  font-size:11px;
-  color:#6b7280;
-  margin-top:3px;
+/* TG BUTTON */
+.tg-fixed{
+  position:fixed;
+  bottom:15px;
+  right:15px;
+  background:#00ff88;
+  color:#000;
+  padding:10px 12px;
+  border-radius:25px;
+  font-weight:700;
+  font-size:13px;
+  text-decoration:none;
 }
 </style>
-
 </head>
 
 <body>
 
-<div class="header">U F O MARKET</div>
+<!-- HEADER -->
+<div class="topbar">
+  <div class="logo">🛸 UFO MARKET</div>
+  <div class="cart">🛒<div class="badge">0</div></div>
+</div>
 
+<!-- LIVE -->
+<div class="live">
+🔥 Son satışlar: TikTok Jeton → <b id="t1">12</b> | Telegram Ulduz → <b id="t2">8</b>
+</div>
+
+<!-- PRODUCTS -->
 <div class="container">
 
-  <!-- TIKTOK -->
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0">
-    <div class="content">
-      <div class="title">TikTok Jeton 1K</div>
-      <div class="price">19 AZN</div>
-      <div class="tag">Digital Product</div>
-      <a class="btn" href="https://t.me/ufousdt">Buy</a>
-    </div>
+    <div class="title">🎁 TikTok Jeton 1K</div>
+    <div class="price">19 AZN</div>
+    <a class="btn" href="https://t.me/ufousdt">Sifariş et</a>
   </div>
 
-  <!-- TELEGRAM 100 -->
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432">
-    <div class="content">
-      <div class="title">Telegram Ulduz 100</div>
-      <div class="price">3 AZN</div>
-      <div class="tag">Instant Delivery</div>
-      <a class="btn" href="https://t.me/ufousdt">Buy</a>
-    </div>
+    <div class="title">⭐ Telegram Ulduz 100</div>
+    <div class="price">3 AZN</div>
+    <a class="btn" href="https://t.me/ufousdt">Sifariş et</a>
   </div>
 
-  <!-- TELEGRAM 1000 -->
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1611746872915-64382b5c76da">
-    <div class="content">
-      <div class="title">Telegram Ulduz 1000</div>
-      <div class="price">28 AZN</div>
-      <div class="tag">Best Value</div>
-      <a class="btn" href="https://t.me/ufousdt">Buy</a>
-    </div>
+    <div class="title">⭐ Telegram Ulduz 1000</div>
+    <div class="price">28 AZN</div>
+    <a class="btn" href="https://t.me/ufousdt">Sifariş et</a>
   </div>
 
-  <!-- NFT -->
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1634973357973-f2ed2657db3c">
-    <div class="content">
-      <div class="title">Alien NFT</div>
-      <div class="price">Razılaşma</div>
-      <div class="tag">NFT Collection</div>
-      <a class="btn" href="https://t.me/ufousdt">Contact</a>
-    </div>
+    <div class="title">🪖 PUBG Hesabları</div>
+    <div class="price">Razılaşma</div>
+    <a class="btn" href="https://t.me/ufousdt">Sifariş et</a>
+  </div>
+
+  <div class="card">
+    <div class="title">🤳🏻 Fake WhatsApp & Telegram</div>
+    <div class="price">Razılaşma</div>
+    <a class="btn" href="https://t.me/ufousdt">Sifariş et</a>
+  </div>
+
+  <div class="card">
+    <div class="title">🪐 NFT</div>
+    <div class="price">Razılaşma</div>
+    <a class="btn" href="https://t.me/ufousdt">Əlaqə</a>
+  </div>
+
+  <div class="card">
+    <div class="title">🎵 TikTok Panel</div>
+    <div class="price">Follow / Like</div>
+    <a class="btn" href="https://t.me/ufousdt">Əlaqə</a>
+  </div>
+
+  <div class="card">
+    <div class="title">📸 Instagram Panel</div>
+    <div class="price">Follower / Reach</div>
+    <a class="btn" href="https://t.me/ufousdt">Əlaqə</a>
+  </div>
+
+  <div class="card">
+    <div class="title">💻 Sayt Yaradılması</div>
+    <div class="price">Landing / Shop</div>
+    <a class="btn" href="https://t.me/ufousdt">Əlaqə</a>
   </div>
 
 </div>
+
+<!-- TG FIX -->
+<a class="tg-fixed" href="https://t.me/ufousdt">TG: ufousdt</a>
+
+<!-- LIVE SCRIPT (LIGHT) -->
+<script>
+setInterval(()=>{
+  document.getElementById("t1").innerText = Math.floor(Math.random()*50);
+  document.getElementById("t2").innerText = Math.floor(Math.random()*30);
+},4000);
+</script>
 
 </body>
 </html>
