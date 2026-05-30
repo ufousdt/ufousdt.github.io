@@ -11,124 +11,85 @@
 body{
   margin:0;
   font-family:Inter;
-  background:#0f0f10;
+  background:#f5f6f8; /* ağ fon */
+  color:#111;
+}
+
+/* HEADER */
+.header{
+  background:#0f172a; /* qara */
   color:white;
-}
-
-/* HERO */
-.hero{
-  height:220px;
-  background:url("https://images.unsplash.com/photo-1520975922284-7c8c3c4b7c3b") center/cover;
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.65);
-}
-
-.hero-content{
-  position:relative;
+  padding:15px;
   text-align:center;
+  font-weight:700;
+  letter-spacing:2px;
 }
 
-.hero h1{
-  margin:0;
-  font-size:28px;
-  letter-spacing:3px;
-}
-
-.lang{
-  margin-top:8px;
-  font-size:12px;
-  color:#00ff88;
-}
-
-/* CONTAINER */
+/* GRID */
 .container{
-  padding:20px;
+  padding:15px;
   display:grid;
-  gap:15px;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
 }
 
 /* CARD */
 .card{
-  background:#161617;
-  border:1px solid #2a2a2a;
+  background:white;
   border-radius:14px;
-  padding:15px;
+  overflow:hidden;
+  box-shadow:0 3px 10px rgba(0,0,0,0.08);
+  border:1px solid #e5e7eb;
 }
 
-/* ITEM */
-.item{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:12px;
-  border-bottom:1px solid #2a2a2a;
+/* IMAGE */
+.card img{
+  width:100%;
+  height:110px;
+  object-fit:cover;
 }
 
-.item:last-child{
-  border:none;
+/* CONTENT */
+.content{
+  padding:10px;
 }
 
-.left{
-  display:flex;
-  align-items:center;
-  gap:8px;
+.title{
+  font-size:14px;
+  font-weight:600;
 }
 
-/* ICONS */
-.icon{
-  font-size:20px;
+.price{
+  margin-top:5px;
+  font-size:13px;
+  color:#16a34a; /* yaşıl */
+  font-weight:700;
 }
 
 /* BUTTON */
 .btn{
-  background:#00ff88;
-  color:black;
-  padding:6px 10px;
-  border-radius:8px;
-  font-size:12px;
-  text-decoration:none;
-  font-weight:700;
-}
-
-/* NFT */
-.nft{
-  display:flex;
-  gap:12px;
-  align-items:center;
-}
-
-.nft img{
-  width:90px;
-  height:90px;
-  border-radius:12px;
-  object-fit:cover;
-}
-
-.tag{
-  color:#00ff88;
-  font-size:12px;
-}
-
-/* TELEGRAM BUTTON */
-.bigbtn{
   display:block;
+  margin-top:8px;
+  padding:8px;
   text-align:center;
-  padding:12px;
-  margin-top:10px;
-  background:#00ff88;
-  color:black;
-  border-radius:10px;
-  font-weight:700;
+  background:#16a34a; /* yaşıl */
+  color:white;
+  font-size:12px;
+  border-radius:8px;
   text-decoration:none;
+  font-weight:600;
+  transition:0.2s;
+}
+
+.btn:hover{
+  background:#128a3d;
+}
+
+/* SMALL TAG */
+.tag{
+  font-size:11px;
+  color:#6b7280;
+  margin-top:3px;
 }
 </style>
 
@@ -136,67 +97,52 @@ body{
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-content">
-    <h1>🛸 U F O MARKET</h1>
-    <div class="lang">AZ / EN</div>
-  </div>
-</div>
+<div class="header">U F O MARKET</div>
 
 <div class="container">
 
-  <!-- PRODUCTS -->
+  <!-- TIKTOK -->
   <div class="card">
-    <h3>Məhsullar</h3>
-
-    <div class="item">
-      <div class="left">
-        <span class="icon">🎵</span>
-        <span>TikTok Jeton 1K – 19 AZN</span>
-      </div>
-      <a class="btn" href="https://t.me/ufousdt?text=TikTok%20Jeton%201K%20sifarişi" target="_blank">Buy</a>
+    <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0">
+    <div class="content">
+      <div class="title">TikTok Jeton 1K</div>
+      <div class="price">19 AZN</div>
+      <div class="tag">Digital Product</div>
+      <a class="btn" href="https://t.me/ufousdt">Buy</a>
     </div>
+  </div>
 
-    <div class="item">
-      <div class="left">
-        <span class="icon">✈️</span>
-        <span>Telegram Ulduzları 100 – 3 AZN</span>
-      </div>
-      <a class="btn" href="https://t.me/ufousdt?text=100%20Telegram%20Ulduzu%20sifarişi" target="_blank">Buy</a>
+  <!-- TELEGRAM 100 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432">
+    <div class="content">
+      <div class="title">Telegram Ulduz 100</div>
+      <div class="price">3 AZN</div>
+      <div class="tag">Instant Delivery</div>
+      <a class="btn" href="https://t.me/ufousdt">Buy</a>
     </div>
+  </div>
 
-    <div class="item">
-      <div class="left">
-        <span class="icon">✈️</span>
-        <span>Telegram Ulduzları 1000 – 28 AZN</span>
-      </div>
-      <a class="btn" href="https://t.me/ufousdt?text=1000%20Telegram%20Ulduzu%20sifarişi" target="_blank">Buy</a>
+  <!-- TELEGRAM 1000 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1611746872915-64382b5c76da">
+    <div class="content">
+      <div class="title">Telegram Ulduz 1000</div>
+      <div class="price">28 AZN</div>
+      <div class="tag">Best Value</div>
+      <a class="btn" href="https://t.me/ufousdt">Buy</a>
     </div>
-
   </div>
 
   <!-- NFT -->
   <div class="card">
-    <h3>NFT Koleksiyası</h3>
-
-    <div class="nft">
-      <img src="https://images.unsplash.com/photo-1620321023374-d1a68fbc720d">
-      <div>
-        <b>Alien NFT #01</b><br>
-        <span class="tag">Razılaşma yolu ilə</span>
-      </div>
+    <img src="https://images.unsplash.com/photo-1634973357973-f2ed2657db3c">
+    <div class="content">
+      <div class="title">Alien NFT</div>
+      <div class="price">Razılaşma</div>
+      <div class="tag">NFT Collection</div>
+      <a class="btn" href="https://t.me/ufousdt">Contact</a>
     </div>
-
-  </div>
-
-  <!-- CONTACT -->
-  <div class="card">
-    <h3>Əlaqə</h3>
-
-    <a class="bigbtn" href="https://t.me/ufousdt" target="_blank">
-      Telegram: @ufousdt
-    </a>
   </div>
 
 </div>
