@@ -5,25 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>U F O Market</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 body{
   margin:0;
-  font-family:Orbitron;
-  background: radial-gradient(circle at top, #0a0014, #000);
-  color:#fff;
+  font-family:Inter;
+  background:#f5f6f8;
+  color:#111;
 }
 
 /* HEADER */
 .header{
+  background:#111827;
+  color:white;
+  padding:18px;
   text-align:center;
-  padding:25px;
-  font-size:26px;
+  font-size:20px;
   font-weight:700;
-  letter-spacing:3px;
-  color:#00ffcc;
-  text-shadow:0 0 10px #00ffcc, 0 0 20px #7a00ff;
 }
 
 /* CONTAINER */
@@ -35,104 +34,83 @@ body{
 
 /* CARD */
 .card{
-  background:rgba(255,255,255,0.04);
-  border:1px solid rgba(0,255,204,0.3);
-  border-radius:16px;
+  background:white;
+  border-radius:14px;
   padding:15px;
-  backdrop-filter:blur(10px);
-  box-shadow:0 0 15px rgba(122,0,255,0.2);
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
-/* ITEMS */
+/* ITEM */
 .item{
   display:flex;
   justify-content:space-between;
   padding:12px;
-  margin-top:8px;
-  border-radius:10px;
-  background:rgba(0,0,0,0.4);
-  border:1px solid rgba(0,255,204,0.15);
+  border-bottom:1px solid #eee;
 }
 
-.item b{
-  color:#00ffcc;
+.item:last-child{
+  border-bottom:none;
 }
 
 /* BUTTON */
 .btn{
   display:block;
   text-align:center;
-  margin-top:10px;
   padding:12px;
-  border-radius:12px;
-  background:linear-gradient(90deg,#00ffcc,#7a00ff);
-  color:black;
-  font-weight:700;
+  margin-top:10px;
+  background:#2563eb;
+  color:white;
   text-decoration:none;
-  box-shadow:0 0 15px #00ffcc;
-  transition:0.3s;
-}
-
-.btn:hover{
-  transform:scale(1.03);
-}
-
-/* SMALL TEXT */
-.small{
-  font-size:12px;
-  opacity:0.7;
-  margin-top:8px;
+  border-radius:10px;
+  font-weight:600;
 }
 </style>
+
 </head>
 
 <body>
 
-<div class="header">🛸 U F O MARKET</div>
+<div class="header">U F O MARKET</div>
 
 <div class="container">
 
   <!-- PRODUCTS -->
   <div class="card">
-    <h2>🛒 Məhsullar</h2>
+    <h3>Məhsullar</h3>
 
     <div class="item">
-      <span>🎟 TikTok Jeton 1K</span>
+      <span>TikTok Jeton 1K</span>
       <b>19 AZN</b>
     </div>
 
     <div class="item">
-      <span>⭐ Telegram Ulduzları 100</span>
+      <span>Telegram Ulduzları 100</span>
       <b>3 AZN</b>
     </div>
 
     <div class="item">
-      <span>⭐ Telegram Ulduzları 1000</span>
+      <span>Telegram Ulduzları 1000</span>
       <b>28 AZN</b>
     </div>
   </div>
 
   <!-- NFT -->
   <div class="card">
-    <h2>👽 NFT Zone</h2>
+    <h3>NFT</h3>
 
     <div class="item">
-      <span>Alien Rare NFT</span>
-      <b>AVAILABLE</b>
+      <span>Alien NFT Collection</span>
+      <b>Available</b>
     </div>
   </div>
 
   <!-- CONTACT -->
   <div class="card">
-    <h2>📡 Əlaqə Portalı</h2>
+    <h3>Əlaqə</h3>
 
-    <a class="btn" href="https://t.me/ufousd" target="_blank">
-      TELEGRAMA KEÇ
+    <a class="btn" href="https://t.me/ufousdt" target="_blank">
+      Telegram: @ufousdt
     </a>
-
-    <div class="small">
-      kliklə → birbaşa UFO admin Telegram açılır
-    </div>
   </div>
 
 </div>
