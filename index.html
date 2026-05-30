@@ -3,126 +3,136 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crypto & NFT Dashboard</title>
+<title>U F O Market</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: radial-gradient(circle at top, #141428, #0b0b14);
-  color: white;
+body{
+  margin:0;
+  font-family:Orbitron;
+  background: radial-gradient(circle at top, #0a0014, #000);
+  color:#fff;
 }
 
-/* TOP BAR */
-.topbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 20px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+/* HEADER */
+.header{
+  text-align:center;
+  padding:25px;
+  font-size:26px;
+  font-weight:700;
+  letter-spacing:3px;
+  color:#00ffcc;
+  text-shadow:0 0 10px #00ffcc, 0 0 20px #7a00ff;
 }
 
-.logo {
-  font-weight: 700;
-  letter-spacing: 1px;
+/* CONTAINER */
+.container{
+  padding:20px;
+  display:grid;
+  gap:15px;
 }
 
-.crypto {
-  display: flex;
-  gap: 15px;
-  font-size: 13px;
+/* CARD */
+.card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(0,255,204,0.3);
+  border-radius:16px;
+  padding:15px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 15px rgba(122,0,255,0.2);
 }
 
-.crypto div {
-  background: rgba(255,255,255,0.07);
-  padding: 6px 10px;
-  border-radius: 8px;
+/* ITEMS */
+.item{
+  display:flex;
+  justify-content:space-between;
+  padding:12px;
+  margin-top:8px;
+  border-radius:10px;
+  background:rgba(0,0,0,0.4);
+  border:1px solid rgba(0,255,204,0.15);
 }
 
-/* MAIN */
-.container {
-  padding: 20px;
-  display: grid;
-  gap: 20px;
+.item b{
+  color:#00ffcc;
 }
 
-/* SALES */
-.card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 14px;
-  padding: 15px;
-  transition: 0.3s;
+/* BUTTON */
+.btn{
+  display:block;
+  text-align:center;
+  margin-top:10px;
+  padding:12px;
+  border-radius:12px;
+  background:linear-gradient(90deg,#00ffcc,#7a00ff);
+  color:black;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 0 15px #00ffcc;
+  transition:0.3s;
 }
 
-.card:hover {
-  transform: translateY(-3px);
-  background: rgba(255,255,255,0.09);
+.btn:hover{
+  transform:scale(1.03);
 }
 
-.sales-item {
-  padding: 10px;
-  margin-top: 8px;
-  border-radius: 10px;
-  background: rgba(0,0,0,0.25);
-}
-
-/* NFT */
-.nft img {
-  width: 180px;
-  border-radius: 14px;
-  margin-top: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-/* ANIMATION */
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(10px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-.card {
-  animation: fadeIn 0.6s ease;
-}
-
-/* MOBILE */
-@media(max-width: 600px){
-  .crypto {
-    flex-wrap: wrap;
-  }
+/* SMALL TEXT */
+.small{
+  font-size:12px;
+  opacity:0.7;
+  margin-top:8px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
-  <div class="logo">CRYPTO DASH</div>
-  <div class="crypto">
-    <div>BTC $67,120</div>
-    <div>ETH $3,210</div>
-    <div>SOL $145</div>
-  </div>
-</div>
+<div class="header">🛸 U F O MARKET</div>
 
 <div class="container">
 
-  <!-- SALES -->
+  <!-- PRODUCTS -->
   <div class="card">
-    <h2>Son Satışlar 🔥</h2>
-    <div class="sales-item">150 stars satıldı</div>
-    <div class="sales-item">100 stars satıldı</div>
-    <div class="sales-item">800 stars satıldı</div>
+    <h2>🛒 Məhsullar</h2>
+
+    <div class="item">
+      <span>🎟 TikTok Jeton 1K</span>
+      <b>19 AZN</b>
+    </div>
+
+    <div class="item">
+      <span>⭐ Telegram Ulduzları 100</span>
+      <b>3 AZN</b>
+    </div>
+
+    <div class="item">
+      <span>⭐ Telegram Ulduzları 1000</span>
+      <b>28 AZN</b>
+    </div>
   </div>
 
   <!-- NFT -->
-  <div class="card nft">
-    <h2>NFT Collection</h2>
-    <img src="https://via.placeholder.com/200" alt="NFT">
-    <p>Limited Edition Digital Asset</p>
+  <div class="card">
+    <h2>👽 NFT Zone</h2>
+
+    <div class="item">
+      <span>Alien Rare NFT</span>
+      <b>AVAILABLE</b>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="card">
+    <h2>📡 Əlaqə Portalı</h2>
+
+    <a class="btn" href="https://t.me/ufousd" target="_blank">
+      TELEGRAMA KEÇ
+    </a>
+
+    <div class="small">
+      kliklə → birbaşa UFO admin Telegram açılır
+    </div>
   </div>
 
 </div>
